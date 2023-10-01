@@ -1,5 +1,11 @@
+import Sidenav from "../../components/Sidenav";
+
 const Dashboard = () => {
-  return <div>Dashboard </div>;
+  return (
+    <div>
+      <Sidenav />
+    </div>
+  );
 };
 
 export default Dashboard;
