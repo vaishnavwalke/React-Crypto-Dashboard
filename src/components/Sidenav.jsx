@@ -1,4 +1,6 @@
+import { Box } from '@chakra-ui/react';
+
 const Sidenav = () => {
-  return <div>Sidenav</div>;
+  return <Box as="h2">Sidenav</Box>;
 };
 export default Sidenav;
