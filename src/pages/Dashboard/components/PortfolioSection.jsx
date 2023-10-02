@@ -76,7 +76,7 @@ const PortfolioSection = () => {
               <Tag colorScheme="gray">INR</Tag>
             </HStack>
           </HStack>
-        </Stack>{' '}
+        </Stack>
       </HStack>
       <HStack>
         <Button leftIcon={<Icon as={AiOutlineArrowDown} />}>Deposit </Button>
