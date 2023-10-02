@@ -14,7 +14,7 @@ import {
 import { FaUserCircle, FaBars } from 'react-icons/fa';
 const TopNav = ({ title, onOpen }) => {
   return (
-    <Box px="4">
+    <Box px="4" bg="white">
       <HStack h="16" justify="space-between" maxW="70rem" mx="auto">
         <Icon
           as={FaBars}
@@ -28,7 +28,7 @@ const TopNav = ({ title, onOpen }) => {
           {title}
         </Heading>
         <Menu>
-          <MenuButton as={Button} r>
+          <MenuButton as={Button}>
             <Icon as={FaUserCircle} fontSize="24px" />
           </MenuButton>
           <MenuList>

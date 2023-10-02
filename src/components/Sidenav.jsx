@@ -9,15 +9,15 @@ const Sidenav = () => {
   ];
 
   return (
-    <Stack
+    <Stack bg="white" 
       justify="space-between"
       boxShadow={{
         base: 'none',
         lg: 'lg',
       }}
       w={{
-        base:"full",
-        lg:"16rem"
+        base: 'full',
+        lg: '16rem',
       }}
       h="100vh"
     >
