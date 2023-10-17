@@ -1,18 +1,19 @@
-import Dashboard from './pages/Dashboard/Dashboard';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Transactions from './pages/Dashboard/components/Transactions';
-import Support from './pages/Support/Support';
+import Dashboard from "./pages/Dashboard/Dashboard";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Support from "./pages/Support/Support";
+import TransactionPage from "./pages/Transaction/Transaction";
+
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Dashboard />,
   },
   {
-    path: '/transactions',
-    element: <Transactions />,
+    path: "/transactions",
+    element: <TransactionPage />,
   },
   {
-    path: '/support',
+    path: "/support",
     element: <Support />,
   },
 ]);

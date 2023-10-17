@@ -1,6 +1,11 @@
-const Transaction = ()=>{
+import { Card } from "@chakra-ui/react";
+import DashboardLayout from "../../components/DashboardLayout";
+
+const TransactionPage = () => {
   return (
-    <div>Transaction</div>
-  )
-}
-export default Transaction;
+    <DashboardLayout>
+      <Card>TransactionPage</Card>
+    </DashboardLayout>
+  );
+};
+export default TransactionPage;
