@@ -9,6 +9,7 @@ import {
   Td,
   TableCaption,
   TableContainer,
+  Tag,
 } from "@chakra-ui/react";
 import { Stack } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
@@ -80,10 +81,16 @@ const TransactionTable = () => {
     },
   ];
 
+  const statusColor = {
+    pending: "#797E82",
+    processing: "#F5A50B",
+    completed: "#059669",
+    cancelled: "#DC2626",
+  };
+
   return (
     <TableContainer>
       <Table variant="simple">
-        <TableCaption>Imperial to metric conversion factors</TableCaption>
         <Thead>
           <Tr>
             <Th>ID</Th>
@@ -93,24 +100,44 @@ const TransactionTable = () => {
             <Th>Status</Th>
           </Tr>
         </Thead>
-        <Tbody>
+        <Tbody color="p.black">
           {tableData.map((data) => (
             <Tr key={data.id}>
-              <Td>{data.id}</Td>
+              <Td fontSize="sm" fontWeight="medium">
+                {data.id}
+              </Td>
               <Td>
-                <Stack>
-                  <Text>{data.date}</Text>
-                  <Text>{data.time}</Text>
+                <Stack spacing={0}>
+                  <Text fontSize="sm" fontWeight="medium">
+                    {data.date}
+                  </Text>
+                  <Text fontSize="xs" color="black.60">
+                    {data.time}
+                  </Text>
                 </Stack>
               </Td>
               <Td>
-                <Stack>
-                  <Text>{data.type.name}</Text>
-                  <Text>{data.type.tag}</Text>
+                <Stack spacing={0}>
+                  <Text fontSize="sm" fontWeight="medium">
+                    {data.type.name}
+                  </Text>
+                  <Text fontSize="xs" color="black.60">
+                    {data.type.tag}
+                  </Text>
                 </Stack>
               </Td>
-              <Td>{data.amount}</Td>
-              <Td>{data.status}</Td>
+              <Td fontSize="sm" fontWeight="medium">
+                {data.amount}
+              </Td>
+              <Td fontSize="sm" fontWeight="medium">
+                <Tag
+                  bg={statusColor[data.status]}
+                  color="white"
+                  borderRadius="full"
+                >
+                  {data.status}
+                </Tag>
+              </Td>
             </Tr>
           ))}
         </Tbody>
